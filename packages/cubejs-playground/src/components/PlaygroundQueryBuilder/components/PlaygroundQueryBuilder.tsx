@@ -31,6 +31,7 @@ import FilterGroup from '../../../QueryBuilder/FilterGroup';
 import MemberGroup from '../../../QueryBuilder/MemberGroup';
 import SelectChartType from '../../../QueryBuilder/SelectChartType';
 import TimeGroup from '../../../QueryBuilder/TimeGroup';
+import ImportModal from '../../../QueryBuilder/ImportModal';
 import { UIFramework } from '../../../types';
 import { dispatchPlaygroundEvent } from '../../../utils';
 import {
@@ -403,6 +404,11 @@ export function PlaygroundQueryBuilder({
                           'Filter'
                         )}
                       />
+                    </Section>
+
+                    <Section>
+                      <SectionHeader>Import</SectionHeader>
+                      <ImportModal query={query} />
                     </Section>
                   </Row>
                 </Card>

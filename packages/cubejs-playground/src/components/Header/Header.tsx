@@ -52,7 +52,7 @@ export default function Header({ selectedKeys }) {
           </StyledMenuItem>
 
           <StyledMenuItem key="/schema">
-            <Link to="/schema">Schema</Link>
+            <Link to="/schema">BTS RULES</Link>
           </StyledMenuItem>
 
           <StyledMenuButton
