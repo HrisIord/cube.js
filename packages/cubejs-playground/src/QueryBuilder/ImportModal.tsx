@@ -34,7 +34,11 @@ export default function ImportModal({ query }: ImportModalProps) {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <TextArea rows={4} value={queryStr} onChange={(s) => console.info(s)} />
+        <TextArea
+          rows={4}
+          value={queryStr}
+          onChange={(s) => setQueryStr(s.target.value)}
+        />
       </Modal>
     </>
   );
