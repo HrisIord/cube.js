@@ -634,17 +634,23 @@ export class DevServer {
     app.get(
       "/playground/schema",
       catchErrors(async (req: Request, res: Response) => {
-        const { compiler, joinGraph, cubeEvaluator } = prepareCompiler(
+        const { compiler, joinGraph } = prepareCompiler(
           this.cubejsServer.repository,
-          { omitErrors: true }
+          {}
         );
 
-        compiler.compile().then(() => {
-          console.info("Join Graph Nodes", joinGraph.nodes);
-          console.info("Join Graph Edges", joinGraph.edges);
-        });
-
-        res.json({});
+        compiler
+          .compile()
+          .then(() => {
+            res.json({
+              nodes: joinGraph.nodes,
+              edges: joinGraph.edges,
+            });
+          })
+          .catch((error) => {
+            console.error(error);
+            res.json({ error });
+          });
       })
     );
 
