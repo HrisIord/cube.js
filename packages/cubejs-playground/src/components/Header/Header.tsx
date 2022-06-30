@@ -46,15 +46,16 @@ export default function Header({ selectedKeys }) {
           <StyledMenuItem key="/build">
             <Link to="/build">Build</Link>
           </StyledMenuItem>
-
           <StyledMenuItem key="/dashboard">
             <Link to="/dashboard">Dashboard App</Link>
           </StyledMenuItem>
-
           <StyledMenuItem key="/schema">
             <Link to="/schema">Schema</Link>
           </StyledMenuItem>
-
+          \
+          <StyledMenuItem key="/schema-diagram">
+            <Link to="/schema-diagram">Schema Diagram</Link>
+          </StyledMenuItem>
           <StyledMenuButton
             key="slack"
             href="https://slack.cube.dev"
@@ -63,7 +64,6 @@ export default function Header({ selectedKeys }) {
             <SlackOutlined />
             Slack
           </StyledMenuButton>
-
           <StyledMenuButton
             noMargin
             key="discourse"
@@ -73,7 +73,6 @@ export default function Header({ selectedKeys }) {
             <Icon component={() => <DiscourseIcon />} />
             Discourse
           </StyledMenuButton>
-
           <StyledMenuButton
             key="docs"
             href="https://cube.dev/docs"
@@ -82,7 +81,6 @@ export default function Header({ selectedKeys }) {
             <FileFilled />
             Docs
           </StyledMenuButton>
-
           <RunOnCubeCloud />
         </StyledMenu>
       )}
@@ -100,6 +98,9 @@ export default function Header({ selectedKeys }) {
                 </Menu.Item>
                 <Menu.Item key="/schema">
                   <Link to="/schema">Schema</Link>
+                </Menu.Item>
+                <Menu.Item key="/schema-diagram">
+                  <Link to="/schema">Schema Diagram</Link>
                 </Menu.Item>
               </Menu>
             }

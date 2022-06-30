@@ -15,6 +15,7 @@ import {
 import { SecurityContextProvider } from './components/SecurityContext/SecurityContextProvider';
 import { AppContextProvider } from './components/AppContext';
 import { RollupDesignerContext } from './components/RollupDesigner';
+import SchemaDiagramPage from './pages/SchemaDiagram/SchemaDiagramPage';
 
 const history = createHashHistory();
 history.listen((location) => {
@@ -80,6 +81,11 @@ ReactDOM.render(
           key="template-gallery"
           path="/template-gallery"
           component={TemplateGalleryPage}
+        />
+        <Route
+          key="schema-diagram"
+          path="/schema-diagram"
+          component={SchemaDiagramPage}
         />
       </App>
     </AppContextProvider>
