@@ -634,7 +634,7 @@ export class DevServer {
     app.get(
       "/playground/schema-graph",
       catchErrors(async (req: Request, res: Response) => {
-        const { compiler, joinGraph } = prepareCompiler(
+        const { compiler, cubeEvaluator } = prepareCompiler(
           this.cubejsServer.repository,
           {}
         );
@@ -642,10 +642,7 @@ export class DevServer {
         compiler
           .compile()
           .then(() => {
-            res.json({
-              nodes: joinGraph.nodes,
-              edges: joinGraph.edges,
-            });
+            res.json({ cubes: cubeEvaluator.builtCubes });
           })
           .catch((error) => {
             console.error(error);
