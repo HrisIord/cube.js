@@ -632,7 +632,7 @@ export class DevServer {
     );
 
     app.get(
-      "/playground/schema",
+      "/playground/schema-graph",
       catchErrors(async (req: Request, res: Response) => {
         const { compiler, joinGraph } = prepareCompiler(
           this.cubejsServer.repository,
