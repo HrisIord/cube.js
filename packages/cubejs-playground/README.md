@@ -28,7 +28,7 @@ const token = 'your.token';
 export default function App() {
   const query = {
     measures: ['Orders.count'],
-    dimensions:  ['Orders.status']
+    dimensions: ['Orders.status'],
   };
 
   return (
@@ -36,7 +36,7 @@ export default function App() {
       apiUrl={apiUrl}
       token={token}
       initialVizState={{
-        query
+        query,
       }}
     />
   );

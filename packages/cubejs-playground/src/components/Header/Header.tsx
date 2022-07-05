@@ -52,7 +52,6 @@ export default function Header({ selectedKeys }) {
           <StyledMenuItem key="/schema">
             <Link to="/schema">Schema</Link>
           </StyledMenuItem>
-          \
           <StyledMenuItem key="/schema-diagram">
             <Link to="/schema-diagram">Schema Diagram</Link>
           </StyledMenuItem>

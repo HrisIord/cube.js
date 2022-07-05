@@ -1,5 +1,7 @@
+import SchemaDiagram from '../../components/SchemaDiagram/SchemaDiagram';
+
 const SchemaDiagramPage = () => {
-  return <div>Schema Diagram goes here~</div>;
+  return <SchemaDiagram />;
 };
 
 export default SchemaDiagramPage;
